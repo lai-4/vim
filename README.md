@@ -4,14 +4,6 @@
 <p align='right'><em>Đặng Quốc Lai</em></p>
 
 > https://tuckerchapman.com/2020/05/09/vimrc_organization/
-
-## Init file organization
-- `plugins`	: install plugins and their config
-- `general`	: store tab settings, color and other general settings
-- `leader`	: shortcut keyboard, key call function
-- `functions`	: store custom functions
-- `python`	: custom setting for language
-
 ## .vimrc
 
 ```
@@ -25,4 +17,16 @@ source ~/.vim/init/general.vimrc   " general settings
 source ~/.vim/init/leader.vimrc    " leader key settings
 source ~/.vim/init/functions.vimrc " custom functions
 source ~/.vim/init/python.vimrc    " config for python
+
 ```
+
+## Init file organization
+- `plugins`	: install plugins and their config
+- `general`	: store tab settings, color and other general settings
+- `leader`	: shortcut keyboard, key call function
+- `functions`	: store custom functions
+- `python`	: custom setting for language
+
+## Install with PlugInstall
+- `vim x`
+- `:PlugInstall`
