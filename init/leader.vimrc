@@ -7,6 +7,7 @@ map <leader>va :call ToggleThemeMode('')<CR>
 
 " Prevent d to cut
 nnoremap d "_d
+vnoremap d "_d
 nnoremap <leader>d d
 
 "Map jj to ESC" 
