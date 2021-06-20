@@ -1,6 +1,7 @@
 " ~/.vim/init/general.vimrc
 
-set number relativenumber
+set relativenumber
+
 set tabstop=4
 set autoindent
 set expandtab
