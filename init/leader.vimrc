@@ -1,6 +1,6 @@
 " ~/.vim/init/leader.vimrc
 
-let mapleader=","       " set the leader key to the comma key
+let mapleader="," 
 nnoremap <leader>h :noh<CR> " toggle search highlighting
 map <leader>vd :call ToggleThemeMode('dark')<CR>
 map <leader>va :call ToggleThemeMode('')<CR>
@@ -8,9 +8,6 @@ map <leader>va :call ToggleThemeMode('')<CR>
 " Prevent d to cut
 nnoremap d "_d
 nnoremap <leader>d d
-let mapleader = ","
-let g:mapleader = ","
-
 
 "Map jj to ESC" 
 inoremap jj <ESC>
