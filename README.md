@@ -14,7 +14,7 @@
 
 ## .vimrc
 
-`
+```
 " ~/.vimrc
 
 syntax enable
@@ -26,4 +26,4 @@ source ~/.vim/init/leader.vimrc    " leader key settings
 source ~/.vim/init/functions.vimrc " custom functions
 source ~/.vim/init/plugins.vimrc   " plugin specific settings
 source ~/.vim/init/python.vimrc    " config for python
-`
+```
