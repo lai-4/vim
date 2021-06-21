@@ -21,11 +21,11 @@ source ~/.vim/init/python.vimrc    " config for python
 ```
 
 ## Init file organization
-- `plugins`	: install plugins and their config
-- `general`	: store tab settings, color and other general settings
-- `leader`	: shortcut keyboard, key call function
-- `functions`	: store custom functions
-- `python`	: custom setting for language
+- `plugins`   : install plugins and their config
+- `general`	  : store tab settings, color and other general settings
+- `leader`	  : shortcut keyboard, key call function
+- `functions` : store custom functions
+- `python`    : custom setting for language
 
 ## Install with PlugInstall
 - `vim x`
