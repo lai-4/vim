@@ -11,4 +11,3 @@ autocmd Filetype python inoremap <buffer> <F5> :w<CR>:bel ter python3 "%"<CR>
 
 let g:pymode_python = 'python3'
 
-
