@@ -31,7 +31,6 @@ call plug#end()
 " NERDTreeToggle 
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-nnoremap <Leader>f :NERDTreeToggle<Enter>
 
 " Ignore warning python-mode
 let g:pymode_lint_ignore = ["C0301", "C0114", "C0115"]

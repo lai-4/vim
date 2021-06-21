@@ -19,3 +19,5 @@ nnoremap <silent> <C-j> <c-w>j<CR>
 nnoremap <silent> <C-h> <c-w>h<CR>
 nnoremap <silent> <C-l> <c-w>l<CR>
 
+" Toggle NERDTree
+nnoremap <leader>f :NERDTreeToggle<Enter>
