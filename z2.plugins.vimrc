@@ -1,27 +1,22 @@
-set nocompatible
-filetype off   
-set rtp+=~/.config/nvim/bundle/Vundle.vim
+filetype plugin indent on
 
-call vundle#begin('~/.config/nvim/bundle/Vundle.vim')
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.config/nvim/autoload')
 
-Plugin 'itchyny/lightline.vim' " Add status for git
-Plugin 'preservim/nerdtree'
-Plugin 'preservim/nerdcommenter' " Comment multiline
-Plugin 'jiangmiao/auto-pairs' " Auto add ()
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim' " Use for search file, text
-Plugin 'tpope/vim-surround' " Add border for text
+Plug 'itchyny/lightline.vim' " Add status for git
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter' " Comment multiline
+Plug 'jiangmiao/auto-pairs' " Auto add ()
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim' " Use for search file, text
+Plug 'tpope/vim-surround' " Add border for text
 
 "Tagbar"
-Plugin 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 
 " Dark+ theme like VS Code
-Plugin 'tomasiser/vim-code-dark'
+Plug 'tomasiser/vim-code-dark'
 
-Plugin 'davidhalter/jedi-vim'
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 " Plug Config
  
