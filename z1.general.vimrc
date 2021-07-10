@@ -1,6 +1,6 @@
 set autoindent
 set background=dark
-set clipboard+=unnamed
+set clipboard=unnamedplus
 set cursorline
 set encoding=utf-8
 set expandtab
@@ -15,6 +15,10 @@ set t_Co=256
 set tabstop=4
 set ttimeoutlen=50
 set wildmenu
+
+set splitbelow
+set splitright
+set formatoptions-=cro " Stop newline continution of comments
 
 autocmd BufEnter * :set scroll=10 " set croll line
 
