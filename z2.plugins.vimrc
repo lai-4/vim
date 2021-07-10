@@ -19,6 +19,7 @@ Plugin 'majutsushi/tagbar'
 " Dark+ theme like VS Code
 Plugin 'tomasiser/vim-code-dark'
 
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()
 filetype plugin indent on
 
