@@ -16,6 +16,9 @@ Plug 'majutsushi/tagbar'
 " Dark+ theme like VS Code
 Plug 'tomasiser/vim-code-dark'
 
+" Coc for python
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
 call plug#end()
 
 " Plug Config

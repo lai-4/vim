@@ -15,4 +15,14 @@ git clone https://github.com/danglai/vim ~/.config/nvim
 ```
 - Open README.md with nvim, `:PlugInstall` 
 
-
+## Config Python with Coc
+- Install Npm first 
+```
+curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt install nodejs
+```
+- Run `:PlugInstall` 2 times
+- Go to (Coc language server)[https://github.com/neoclide/coc.nvim/wiki/Language-servers#python] to copy config
+- Enter `:CocConfig` and paste config python
+- `pip install jedi-language-server`
