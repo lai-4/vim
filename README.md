@@ -9,11 +9,10 @@
 ## Install with PlugInstall
 - Install xsel (suport for clipboard): `sudo apt install xsel`
 - Add `export PATH=$HOME/config/bin:$PATH` to `bash_profile`
-- Download vundle and setting: 
+- Download setting: 
 ```
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
 git clone https://github.com/danglai/vim ~/.config/nvim
 ```
-- Open README.md with nvim, `:PluginInstall` 
+- Open README.md with nvim, `:PlugInstall` 
 
 
