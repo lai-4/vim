@@ -1,6 +1,6 @@
 filetype plugin indent on
 
-call plug#begin('~/.config/nvim/autoload')
+call plug#begin('~/AppData/Local/nvim/autoload')
 
 Plug 'itchyny/lightline.vim' " Add status for git
 Plug 'preservim/nerdtree'

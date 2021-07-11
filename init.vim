@@ -1,5 +1,5 @@
-for f in split(glob('~/.config/nvim/*.vimrc'), '\n')
+for f in split(glob('~/AppData/Local/nvim/*.vimrc'), '\n')
    exe 'source' f
 endfor
 
-source ~/.config/nvim/coc.vim
+source  ~/AppData/Local/nvim/coc.vim
