@@ -8,8 +8,8 @@
 
 ## Install with PlugInstall
 - Download NVim
-  - [Git] (https://github.com/neovim/neovim/releases/tag/nightly)
-  - [Nvim 0.6 GG Drive] (https://drive.google.com/file/d/14JuitC9dE7uXDbm57sZa8sCAeu7L0QBq)
+  - [Git](https://github.com/neovim/neovim/releases/tag/nightly)
+  - [Nvim 0.6 GG Drive](https://drive.google.com/file/d/14JuitC9dE7uXDbm57sZa8sCAeu7L0QBq)
 - Show config path of nvim: `:echo stdpath('config')`
 - Install xsel (suport for clipboard): `sudo apt install xsel`
 - Add `export PATH=$HOME/config/bin:$PATH` to `bash_profile`
