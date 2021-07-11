@@ -25,3 +25,4 @@ nnoremap <silent> <C-l> <c-w>l<CR>
 nnoremap <leader>f :NERDTreeToggle<Enter>
 map <C-b> :NERDTreeToggle<CR> 
 map <C-i> :NERDTreeFind<CR> " search file
+

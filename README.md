@@ -26,3 +26,4 @@ sudo apt install nodejs
 - Go to (Coc language server)[https://github.com/neoclide/coc.nvim/wiki/Language-servers#python] to copy config
 - Enter `:CocConfig` and paste config python
 - `pip install jedi-language-server`
+- `:CocInstall coc-jedi`
