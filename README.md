@@ -11,7 +11,7 @@
 - Add `export PATH=$HOME/config/bin:$PATH` to `bash_profile`
 - Download setting: 
 ```
-git clone https://github.com/danglai/vim ~/.config/nvim
+git clone --single-branch --branch nvim2 https://github.com/danglai/vim ~/.config/nvim
 ```
 - Open README.md with nvim, `:PlugInstall` 
 
