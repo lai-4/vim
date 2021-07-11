@@ -11,7 +11,7 @@
 - Add path to Environment
 - Download setting:
 ```
-git clone --single-branch --branch nvim2 https://github.com/danglai/vim ~/AppData/Local/nvim
+git clone --single-branch --branch nvim1 https://github.com/danglai/vim ~/AppData/Local/nvim
 ```
 - Open README.md with nvim, `:PlugInstall` 2 times
 
