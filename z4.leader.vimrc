@@ -9,6 +9,9 @@ nnoremap d "_d
 vnoremap d "_d
 nnoremap <leader>d d
 
+nnoremap c "_c
+nnoremap <leader>c c
+
 " Backspace to remove tab previous
 set backspace=indent,eol,start
 
