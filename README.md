@@ -3,6 +3,20 @@
 <br/>
 <p align='right'><em>Đặng Quốc Lai</em></p>
 
+## Phím tắt
+- `,f` (leader): format file 
+- `:e *`: nhấn tab để tìm kiếm 1 file
+- `<C-o>`: đi tới vị trí trước đó
+- `<C-i>`: đi tới vị trí sau đó
+- Di chuyển giữa các tab
+    ```
+    :bf            # Go to first file.<br/>
+    :bl            # Go to last file<br/>
+    :bn            # Go to next file.<br/>
+    :bp            # Go to previous file.<br/>
+    :b number  # Go to n'th file (E.g :b 2)<br/>
+    :bw            # Close current file.<br/>
+    ```
 
 ## Install with PlugInstall
 - Download NVim

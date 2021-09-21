@@ -25,6 +25,4 @@ nnoremap <silent> <C-h> <c-w>h<CR>
 nnoremap <silent> <C-l> <c-w>l<CR>
 
 " Toggle NERDTree
-nnoremap <C-b> :NERDTreeToggle<CR> 
-nnoremap <C-i> :NERDTreeFind<CR> " search file
-
+nnoremap <C-b> :NERDTreeToggle<CR>
