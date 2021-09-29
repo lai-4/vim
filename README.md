@@ -32,7 +32,7 @@ git clone --single-branch --branch nvim1 https://github.com/danglai/vim ~/AppDat
 ## Config Python with Coc
 - `pip install jedi-language-server`
 - `:CocInstall coc-jedi`
-- `:CocInstall coc-pyright`
+- `:CocInstall coc-pyright` (Cài [autopep8](https://pypi.org/project/autopep8/) trong command trước `pip install --upgrade autopep8`)
 
 ## Not Important
 - Show config path of nvim: `:echo stdpath('config')`
