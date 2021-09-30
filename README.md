@@ -9,15 +9,21 @@
 - `<C-o>`: đi tới vị trí trước đó
 - `<C-i>`: đi tới vị trí sau đó
 - Di chuyển giữa các tab
+    ```vim
+    :bf                     |" Go to first file.<br/>
+    :bl                     |" Go to last file<br/>
+    :bn                     |" Go to next file.<br/>
+    :bp                     |" Go to previous file.<br/>
+    :b number               |" Go to n'th file (E.g :b 2)<br/>
+    :bw                     |" Close current file.<br/>
     ```
-    :bf            # Go to first file.<br/>
-    :bl            # Go to last file<br/>
-    :bn            # Go to next file.<br/>
-    :bp            # Go to previous file.<br/>
-    :b number  # Go to n'th file (E.g :b 2)<br/>
-    :bw            # Close current file.<br/>
+- Xem đường dẫn của file đang mở
+    ```vim
+    :echo @%                |" directory/name of file
+    :echo expand('%:t')     |" name of file ('tail')
+    :echo expand('%:p')     |" full path
+    :echo expand('%:p:h')   |" directory containing file ('head')
     ```
-
 ## Install with PlugInstall
 - Download NVim
   - [Git](https://github.com/neovim/neovim/releases/tag/nightly)
