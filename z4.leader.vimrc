@@ -7,6 +7,8 @@ map <leader>va :call ToggleThemeMode('')<CR>
 " go to start and end line
 nnoremap <leader>s 0
 nnoremap <leader>e $
+vnoremap <leader>s 0
+vnoremap <leader>e $
 
 " Prevent d to cut
 nnoremap d "_d
