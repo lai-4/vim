@@ -4,7 +4,9 @@
 <p align='right'><em>Đặng Quốc Lai</em></p>
 
 ## Phím tắt
-- `,f` (leader): format file 
+- `,` `f` (leader): format file 
+- `,` `s` (start): go to start line = `0`
+- `,` `e` (end): go to end line = `$` 
 - `:e *`: nhấn tab để tìm kiếm 1 file
 - `<C-o>`: đi tới vị trí trước đó
 - `<C-i>`: đi tới vị trí sau đó

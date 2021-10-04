@@ -4,6 +4,10 @@ nnoremap <leader>h :noh<CR> " toggle search highlighting
 map <leader>vd :call ToggleThemeMode('dark')<CR>
 map <leader>va :call ToggleThemeMode('')<CR>
 
+" go to start and end line
+nnoremap <leader>s 0
+nnoremap <leader>e $
+
 " Prevent d to cut
 nnoremap d "_d
 vnoremap d "_d
