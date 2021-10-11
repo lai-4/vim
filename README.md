@@ -4,6 +4,13 @@
 <p align='right'><em>Đặng Quốc Lai</em></p>
 
 ## Phím tắt
+- Terminal:
+  - `,` `vsp`: mở cmd bên trái
+  - `,` `sp`: mở cmd bên dưới
+  - Trong chế độ terminal, jj để về normal mode
+- [Split Window](https://gist.github.com/Starefossen/5957088):
+  - Nhân đôi 1 cửa sổ: Ctrl-W v
+  - Đóng tất cả các cửa số khác: Ctrl-W o
 - `,` `f` (leader): format file 
 - `,` `s` (start): go to start line = `0`
 - `,` `e` (end): go to end line = `$` 

@@ -12,7 +12,7 @@ set ttimeoutlen=50
 set wildmenu
 
 set splitbelow
-set splitright
+" set splitright
 set formatoptions-=cro " Stop newline continution of comments
 set expandtab
 set autoindent

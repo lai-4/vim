@@ -4,6 +4,12 @@ nnoremap <leader>h :noh<CR> " toggle search highlighting
 map <leader>vd :call ToggleThemeMode('dark')<CR>
 map <leader>va :call ToggleThemeMode('')<CR>
 
+" Exit terminal mode by C-d
+tnoremap jj <C-\><C-n><CR>
+nnoremap <leader>sp :sp term://cmd<CR> " Add cmd below
+nnoremap <leader>vsp :vsp term://cmd<CR> " Add cmd left
+
+
 " go to start and end line
 nnoremap <leader>s 0
 nnoremap <leader>e $
