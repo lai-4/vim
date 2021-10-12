@@ -10,6 +10,7 @@
   - Trong chế độ terminal, jj để về normal mode
 - [Split Window](https://gist.github.com/Starefossen/5957088):
   - Nhân đôi 1 cửa sổ: Ctrl-W v
+  - Đảo vị trí 2 cửa số: Ctrl-Wrr
   - Đóng tất cả các cửa số khác: Ctrl-W o
 - `,` `f` (leader): format file 
 - `,` `s` (start): go to start line = `0`
