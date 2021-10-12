@@ -9,6 +9,8 @@ tnoremap jj <C-\><C-n><CR>
 nnoremap <leader>sp :sp term://cmd<CR> " Add cmd below
 nnoremap <leader>vsp :vsp term://cmd<CR> " Add cmd left
 
+" Ctrl Backspace to cw
+imap <C-BS> <C-W>
 
 " go to start and end line
 nnoremap <leader>s 0
