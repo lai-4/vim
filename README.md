@@ -5,6 +5,14 @@
 
 ## Phím tắt
 - Word Wrap: `Alt` `z`
+- [Di chuyển screen](https://stackoverflow.com/questions/3458689/how-to-move-screen-without-moving-cursor-in-vim):
+  - `zt` hoặc `z-enter`: di chuyển dòng hiện tại lên đầu (Top) màn hình
+  - `zz` hoặc `z.`: di chuyển dòng hiện tại lên giữa màn hình
+  - `zb` hoặc `z-`: di chuyển dòng hiện tại về cuối (Bottom) màn hình
+  - `Ctrl` `u`: di chuyển cursor & screen lên ½ trang
+  - `Ctrl` `d`: di chuyển cursor & screen xuống ½ trang
+  - `Ctrl` `b`: di chuyển screen lên 1 trang, cursor dòng cuối
+  - `Ctrl` `f`: di chuyển screen xuống 1 trang, cursor dòng đầu  - 
 - Terminal:
   - `,` `vsp`: mở cmd bên trái
   - `,` `sp`: mở cmd bên dưới
