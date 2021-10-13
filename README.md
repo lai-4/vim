@@ -4,6 +4,7 @@
 <p align='right'><em>Đặng Quốc Lai</em></p>
 
 ## Phím tắt
+- Word Wrap: `Alt` `z`
 - Terminal:
   - `,` `vsp`: mở cmd bên trái
   - `,` `sp`: mở cmd bên dưới

@@ -9,6 +9,9 @@ tnoremap jj <C-\><C-n><CR>
 nnoremap <leader>sp :sp term://cmd<CR> " Add cmd below
 nnoremap <leader>vsp :vsp term://cmd<CR> " Add cmd left
 
+" Toggle Word wrap
+nnoremap <A-z> :set wrap!<CR>
+ 
 " Ctrl Backspace to cw
 imap <C-BS> <C-W>
 
