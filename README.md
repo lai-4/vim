@@ -4,6 +4,8 @@
 <p align='right'><em>Đặng Quốc Lai</em></p>
 
 ## Phím tắt
+- `C`: Xóa đến cuối dòng
+- `,` `C`: Cắt đến cuối dòng 
 - Word Wrap: `Alt` `z`
 - [Di chuyển screen](https://stackoverflow.com/questions/3458689/how-to-move-screen-without-moving-cursor-in-vim):
   - `zt` hoặc `z-enter`: di chuyển dòng hiện tại lên đầu (Top) màn hình

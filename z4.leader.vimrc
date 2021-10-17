@@ -26,7 +26,9 @@ nnoremap d "_d
 vnoremap d "_d
 nnoremap <leader>d d
 
+nnoremap C "_c$
 nnoremap c "_c
+nnoremap <leader>C C
 nnoremap <leader>c c
 
 " Backspace to remove tab previous
