@@ -10,6 +10,7 @@ set showmatch
 set t_Co=256
 set ttimeoutlen=50
 set wildmenu
+set title
 
 set splitbelow
 " set splitright
