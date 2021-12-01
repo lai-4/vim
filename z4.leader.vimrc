@@ -22,14 +22,36 @@ vnoremap <leader>s 0
 vnoremap <leader>e $
 
 " Prevent d to cut
-nnoremap d "_d
-vnoremap d "_d
-nnoremap <leader>d d
+" nnoremap d "_d
+" vnoremap d "_d
+" nnoremap <leader>d d
 
-nnoremap C "_c$
-nnoremap c "_c
-nnoremap <leader>C C
-nnoremap <leader>c c
+" nnoremap c "_c
+" nnoremap <leader>c c
+" 
+" nnoremap <leader>C C
+" nnoremap C "_c$
+" 
+" nnoremap x "_x
+" vnoremap x "_x
+" nnoremap <leader>x x
+
+let key_not_cut = ["c", "d", "x"]
+let modes = ['v', 'n']
+let leaders = ['', '<leader>']
+
+for key in key_not_cut
+  for mode in modes
+    for leader in leaders
+      " let query = mode.'noremap '.leader. ' ' . key . ' "_' . key
+      " echo query
+      " execute query
+      execute mode.'noremap '.leader. ' ' . key . ' "_' . key
+      execute mode.'noremap '.leader. ' ' . toupper(key) . ' "_' . toupper(key)
+    endfor
+  endfor
+endfor
+
 
 " Backspace to remove tab previous
 set backspace=indent,eol,start
