@@ -1,8 +1,11 @@
+let g:config_files = [
+      \ 'globals.vim',
+      \ 'options.vim',
+      \ 'mappings.vim',
+      \ 'plugins.vim',
+      \ 'themes.vim'
+      \ ]
 
-lua require('lua-init')
-
-for f in split(glob('~/AppData/Local/nvim/*.vimrc'), '\n')
-   exe 'source' f
+for s:fname in g:config_files
+  execute printf('source %s/core/%s', stdpath('config'), s:fname)
 endfor
-
-source  ~/AppData/Local/nvim/coc.vim

@@ -3,6 +3,8 @@
 <br/>
 <p align='right'><em>Đặng Quốc Lai</em></p>
 
+## Lưu ý khi cài Theme:
+- Ở trong folder git của theme, có file ví dụ **autoload/sonokai.vim** thì copy file đó vào thư mục autoload của nvim
 ## Phím tắt
 - `C`: Xóa đến cuối dòng
 - `,` `C`: Cắt đến cuối dòng 

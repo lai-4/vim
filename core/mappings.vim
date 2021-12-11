@@ -52,7 +52,4 @@ nnoremap <silent> <C-h> <c-w>h<CR>
 nnoremap <silent> <C-l> <c-w>l<CR>
 
 " Toggle NERDTree
-nnoremap <C-b> :NERDTreeToggle<CR>
-
-" setting percent to close bracket
-set matchpairs+=<:>
+" nnoremap <C-b> :NERDTreeToggle<CR>
