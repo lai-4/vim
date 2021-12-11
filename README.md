@@ -1,7 +1,12 @@
-# Config NeoVim For Windows
+# Config NeoVim 0.6 with packer For Windows
 
 <br/>
 <p align='right'><em>Đặng Quốc Lai</em></p>
+
+## Cách cài đặt nvim0.6 theo packer:
+- Mở 1 file bằng vim, -> vim sẽ tự tải packer -> đóng file lại
+- Mở lại file -> `:ps` để cài các thư viện -> đóng file
+- Mở lại file -> `Semshi enable` để kích hoạt font.
 
 ## Lưu ý khi cài Theme:
 - Ở trong folder git của theme, có file ví dụ **autoload/sonokai.vim** thì copy file đó vào thư mục autoload của nvim
@@ -56,7 +61,6 @@
 ```
 git clone --single-branch --branch nvim1 https://github.com/danglai/vim ~/AppData/Local/nvim
 ```
-- Open README.md with nvim, `:PlugInstall` 2 times
 
 ## Config Python with Coc
 - `pip install jedi-language-server`

@@ -77,63 +77,10 @@ _G.packer_plugins = {
     path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
-  ["cmp-buffer"] = {
-    after_files = { "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\cmp-buffer\\after\\plugin\\cmp_buffer.lua" },
-    load_after = {
-      ["nvim-cmp"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\cmp-buffer",
-    url = "https://github.com/hrsh7th/cmp-buffer"
-  },
-  ["cmp-nvim-lsp"] = {
-    after = { "nvim-lspconfig" },
-    after_files = { "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\cmp-nvim-lsp\\after\\plugin\\cmp_nvim_lsp.lua" },
-    load_after = {
-      ["nvim-cmp"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\cmp-nvim-lsp",
-    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["cmp-nvim-lua"] = {
-    after_files = { "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\cmp-nvim-lua\\after\\plugin\\cmp_nvim_lua.lua" },
-    load_after = {
-      ["nvim-cmp"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\cmp-nvim-lua",
-    url = "https://github.com/hrsh7th/cmp-nvim-lua"
-  },
-  ["cmp-nvim-ultisnips"] = {
-    after_files = { "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\cmp-nvim-ultisnips\\after\\plugin\\cmp_nvim_ultisnips.lua" },
-    load_after = {
-      ["nvim-cmp"] = true,
-      ultisnips = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\cmp-nvim-ultisnips",
-    url = "https://github.com/quangnguyen30192/cmp-nvim-ultisnips"
-  },
-  ["cmp-path"] = {
-    after_files = { "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\cmp-path\\after\\plugin\\cmp_path.lua" },
-    load_after = {
-      ["nvim-cmp"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\cmp-path",
-    url = "https://github.com/hrsh7th/cmp-path"
-  },
-  edge = {
-    loaded = false,
-    needs_bufread = false,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\edge",
-    url = "https://github.com/sainnhe/edge"
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
   },
   firenvim = {
     loaded = false,
@@ -163,14 +110,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
   },
-  ["lualine.nvim"] = {
-    config = { "require('config.statusline')" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
-  },
   ["markdown-preview.nvim"] = {
     loaded = false,
     needs_bufread = false,
@@ -179,7 +118,6 @@ _G.packer_plugins = {
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-buffer", "cmp-nvim-lsp", "cmp-nvim-lua", "cmp-nvim-ultisnips", "cmp-path" },
     config = { "require('config.nvim-cmp')" },
     load_after = {
       ["lspkind-nvim"] = true
@@ -188,21 +126,6 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
-  },
-  ["nvim-lspconfig"] = {
-    config = { "require('config.lsp')" },
-    load_after = {
-      ["cmp-nvim-lsp"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\nvim-lspconfig",
-    url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = false,
@@ -218,35 +141,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\semshi",
     url = "https://github.com/numirias/semshi"
   },
-  ultisnips = {
-    after = { "cmp-nvim-ultisnips" },
-    after_files = { "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\ultisnips\\after\\plugin\\UltiSnips_after.vim" },
-    loaded = false,
-    needs_bufread = true,
-    only_cond = false,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\ultisnips",
-    url = "https://github.com/SirVer/ultisnips"
-  },
-  ["vim-json"] = {
-    loaded = false,
-    needs_bufread = true,
-    only_cond = false,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\vim-json",
-    url = "https://github.com/elzr/vim-json"
-  },
-  ["vim-python-pep8-indent"] = {
+  sonokai = {
     loaded = false,
     needs_bufread = false,
-    only_cond = false,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\vim-python-pep8-indent",
-    url = "https://github.com/Vimjas/vim-python-pep8-indent"
-  },
-  ["vim-pythonsense"] = {
-    loaded = false,
-    needs_bufread = true,
-    only_cond = false,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\vim-pythonsense",
-    url = "https://github.com/jeetsukumaran/vim-pythonsense"
+    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\sonokai",
+    url = "https://github.com/sainnhe/sonokai"
   },
   ["vim-swap"] = {
     loaded = false,
@@ -295,21 +194,14 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType python ++once lua require("packer.load")({'semshi', 'vim-python-pep8-indent', 'vim-pythonsense'}, { ft = "python" }, _G.packer_plugins)]]
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-json', 'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
-vim.cmd [[au FileType json ++once lua require("packer.load")({'vim-json'}, { ft = "json" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType python ++once lua require("packer.load")({'semshi'}, { ft = "python" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'ultisnips'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'vim-swap', 'hop.nvim', 'bufferline.nvim', 'lualine.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'vim-swap', 'hop.nvim', 'bufferline.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au BufEnter * ++once lua require("packer.load")({'lspkind-nvim'}, { event = "BufEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
-vim.cmd("augroup END")
-vim.cmd [[augroup filetypedetect]]
-time([[Sourcing ftdetect script at: C:\Users\pc\AppData\Local\nvim-data\site\pack\packer\opt\vim-json\ftdetect\json.vim]], true)
-vim.cmd [[source C:\Users\pc\AppData\Local\nvim-data\site\pack\packer\opt\vim-json\ftdetect\json.vim]]
-time([[Sourcing ftdetect script at: C:\Users\pc\AppData\Local\nvim-data\site\pack\packer\opt\vim-json\ftdetect\json.vim]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
 

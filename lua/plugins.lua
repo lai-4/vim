@@ -33,15 +33,17 @@ require("packer").startup({
     use {"onsails/lspkind-nvim", event = "BufEnter"}
     use {"hrsh7th/nvim-cmp", after = "lspkind-nvim", config = [[require('config.nvim-cmp')]]}
 
-    use {"hrsh7th/cmp-nvim-lsp", after = "nvim-cmp"}
+    -- use {"hrsh7th/cmp-nvim-lsp", after = "nvim-cmp"}
+    -- use({ "neovim/nvim-lspconfig", after = "cmp-nvim-lsp", config = [[require('config.lsp')]] })
+    -- use {"hrsh7th/cmp-nvim-lua", after = "nvim-cmp"}
+    -- use {"hrsh7th/cmp-path", after = "nvim-cmp"}
+    -- use {"hrsh7th/cmp-buffer", after = "nvim-cmp"}
+    -- use({ "Vimjas/vim-python-pep8-indent", ft = { "python" } })
+    -- use({ "jeetsukumaran/vim-pythonsense", ft = { "python" } })
+    -- use({"SirVer/ultisnips", event = 'InsertEnter'})
+    -- use {"quangnguyen30192/cmp-nvim-ultisnips", after = {'nvim-cmp', 'ultisnips'}}
 
-    use({ "neovim/nvim-lspconfig", after = "cmp-nvim-lsp", config = [[require('config.lsp')]] })
-
-    use {"hrsh7th/cmp-nvim-lua", after = "nvim-cmp"}
-    use {"hrsh7th/cmp-path", after = "nvim-cmp"}
-    use {"hrsh7th/cmp-buffer", after = "nvim-cmp"}
-    use({"SirVer/ultisnips", event = 'InsertEnter'})
-    use {"quangnguyen30192/cmp-nvim-ultisnips", after = {'nvim-cmp', 'ultisnips'}}
+    use {'neoclide/coc.nvim', branch = 'release'}
 
     if vim.g.is_mac then
       use {"hrsh7th/cmp-emoji", after = 'nvim-cmp'}
@@ -54,8 +56,6 @@ require("packer").startup({
       use({ "numirias/semshi", ft = "python", config = "vim.cmd [[UpdateRemotePlugins]]" })
     end
 
-    use({ "Vimjas/vim-python-pep8-indent", ft = { "python" } })
-    use({ "jeetsukumaran/vim-pythonsense", ft = { "python" } })
     use({"machakann/vim-swap", event = "VimEnter"})
     use {
       'phaazon/hop.nvim',
@@ -68,15 +68,14 @@ require("packer").startup({
     -- use({"sainnhe/edge", opt = true})
     use({"sainnhe/sonokai", opt = true})
 
-
-    use {
-      'nvim-lualine/lualine.nvim', event = 'VimEnter',
-      requires = {'kyazdani42/nvim-web-devicons', opt = true},
-      config = [[require('config.statusline')]]
-    }
+    -- use {
+    --   'nvim-lualine/lualine.nvim', event = 'VimEnter',
+    --   requires = {'kyazdani42/nvim-web-devicons', opt = true},
+    --   config = [[require('config.statusline')]]
+    -- }
 
     use({ "akinsho/bufferline.nvim", event = "VimEnter", config = [[require('config.bufferline')]] })
-    use({ "elzr/vim-json", ft = { "json", "markdown" } })
+    -- use({ "elzr/vim-json", ft = { "json", "markdown" } })
 
     if vim.g.is_win or vim.g.is_mac then
       use({
@@ -99,6 +98,7 @@ require("packer").startup({
       })
     end
     use({"gelguy/wilder.nvim", opt = true, setup = [[vim.cmd('packadd wilder.nvim')]]})
+
   end,
   config = {
     max_jobs = 16,

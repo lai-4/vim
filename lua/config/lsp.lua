@@ -163,9 +163,7 @@ vim.diagnostic.config({
   underline = true,
   virtual_text = false,
   signs = true,
-  severity_sort = true,
-  update_in_insert = true,
-
+  severity_sort = true
 })
 
 -- lsp.handlers["textDocument/publishDiagnostics"] = lsp.with(lsp.diagnostic.on_publish_diagnostics, {
