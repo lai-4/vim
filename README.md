@@ -4,6 +4,12 @@
 <p align='right'><em>Đặng Quốc Lai</em></p>
 
 > https://tuckerchapman.com/2020/05/09/vimrc_organization/
+
+## Thông tin các nhánh
+- Nhánh cho window:
+  - [nvim0.6](https://github.com/danglai/vim/tree/nvim0.6): Nhánh mới nhất nvim 0.6 with packer (COC suggestion and Language Server Protocol in comment)
+- Nhánh cho linux:
+- 
 ## .vimrc
 
 ```
