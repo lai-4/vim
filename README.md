@@ -7,6 +7,7 @@
 - Mở 1 file bằng vim, -> vim sẽ tự tải packer -> đóng file lại
 - Mở lại file -> `:ps` để cài các thư viện -> đóng file
 - Mở lại file -> `Semshi enable` để kích hoạt font.
+- Kiểm tra file và folder nvim-autopairs trong folder lua. 
 
 ## Lưu ý khi cài Theme:
 - Ở trong folder git của theme, có file ví dụ **autoload/sonokai.vim** thì copy file đó vào thư mục autoload của nvim

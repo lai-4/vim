@@ -23,6 +23,10 @@ end
 -- Load packer.nvim
 vim.cmd("packadd packer.nvim")
 local util = require('packer.util')
+-- auto pair
+require("nvim-autopairs").setup({
+  ignored_next_char = "[%w%.]" -- will ignore alphanumeric and `.` symbol
+})
 
 require("packer").startup({
   function(use)
@@ -57,6 +61,8 @@ require("packer").startup({
     end
 
     use({"machakann/vim-swap", event = "VimEnter"})
+
+    -- move faster
     use {
       'phaazon/hop.nvim',
       event = "VimEnter",
@@ -76,16 +82,6 @@ require("packer").startup({
 
     use({ "akinsho/bufferline.nvim", event = "VimEnter", config = [[require('config.bufferline')]] })
     -- use({ "elzr/vim-json", ft = { "json", "markdown" } })
-
-    if vim.g.is_win or vim.g.is_mac then
-      use({
-        "iamcco/markdown-preview.nvim",
-        run = function()
-          fn["mkdp#util#install"]()
-        end,
-        ft = { "markdown" },
-      })
-    end
 
     use({'folke/zen-mode.nvim', cmd = 'ZenMode', config = [[require('config.zen-mode')]]})
 
