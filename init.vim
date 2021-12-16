@@ -9,3 +9,5 @@ let g:config_files = [
 for s:fname in g:config_files
   execute printf('source %s/core/%s', stdpath('config'), s:fname)
 endfor
+
+source  ~/AppData/Local/nvim/coc.vim

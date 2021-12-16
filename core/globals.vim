@@ -3,7 +3,7 @@ let g:is_linux = (has('unix') && !has('macunix')) ? v:true : v:false
 let g:is_mac = has('macunix') ? v:true : v:false
 let g:logging_level = 'info'
 
-let g:loaded_python_provider = 0
+let g:loaded_python_provider = 1
 
 let g:loaded_perl_provider = 0
 

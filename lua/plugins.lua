@@ -33,9 +33,14 @@ require("packer").startup({
     use {'lewis6991/impatient.nvim', config = [[require('impatient')]]}
 
     use({"wbthomason/packer.nvim", opt = true})
+    use {
+      'kyazdani42/nvim-tree.lua',
+      config = [[require('config.nvim-tree')]]
+  }
 
-    use {"onsails/lspkind-nvim", event = "BufEnter"}
-    use {"hrsh7th/nvim-cmp", after = "lspkind-nvim", config = [[require('config.nvim-cmp')]]}
+    -- vì 2 thư viện dưới đây mà không thể auto import library trong python.
+    -- use {"onsails/lspkind-nvim", event = "BufEnter"}
+    -- use {"hrsh7th/nvim-cmp", after = "lspkind-nvim", config = [[require('config.nvim-cmp')]]}
 
     -- use {"hrsh7th/cmp-nvim-lsp", after = "nvim-cmp"}
     -- use({ "neovim/nvim-lspconfig", after = "cmp-nvim-lsp", config = [[require('config.lsp')]] })
@@ -49,12 +54,12 @@ require("packer").startup({
 
     use {'neoclide/coc.nvim', branch = 'release'}
 
-    if vim.g.is_mac then
-      use {"hrsh7th/cmp-emoji", after = 'nvim-cmp'}
-    end
-    if vim.g.is_mac then
-      use({ "nvim-treesitter/nvim-treesitter", event = 'BufEnter', run = ":TSUpdate", config = [[require('config.treesitter')]] })
-    end
+    --if vim.g.is_mac then
+    --  use {"hrsh7th/cmp-emoji", after = 'nvim-cmp'}
+    --end
+    --if vim.g.is_mac then
+    --  use({ "nvim-treesitter/nvim-treesitter", event = 'BufEnter', run = ":TSUpdate", config = [[require('config.treesitter')]] })
+    --end
 
     if vim.g.is_win then
       use({ "numirias/semshi", ft = "python", config = "vim.cmd [[UpdateRemotePlugins]]" })
@@ -67,42 +72,22 @@ require("packer").startup({
       'phaazon/hop.nvim',
       event = "VimEnter",
       config = function()
-        vim.defer_fn(function() require('config.nvim_hop') end, 2000)
+        vim.defer_fn(function() require('config.nvim-hop') end, 2000)
       end
     }
 
     -- use({"sainnhe/edge", opt = true})
     use({"sainnhe/sonokai", opt = true})
 
-    -- use {
-    --   'nvim-lualine/lualine.nvim', event = 'VimEnter',
-    --   requires = {'kyazdani42/nvim-web-devicons', opt = true},
-    --   config = [[require('config.statusline')]]
-    -- }
-
     use({ "akinsho/bufferline.nvim", event = "VimEnter", config = [[require('config.bufferline')]] })
     -- use({ "elzr/vim-json", ft = { "json", "markdown" } })
 
-    use({'folke/zen-mode.nvim', cmd = 'ZenMode', config = [[require('config.zen-mode')]]})
+    -- use({'folke/zen-mode.nvim', cmd = 'ZenMode', config = [[require('config.zen-mode')]]})
 
-    if vim.g.is_win or vim.g.is_mac then
-      use({
-        "glacambre/firenvim",
-        run = function() fn["firenvim#install"](0) end,
-        opt = true,
-        setup = [[vim.cmd('packadd firenvim')]],
-      })
-    end
+    -- gợi ý nhanh ở command
     use({"gelguy/wilder.nvim", opt = true, setup = [[vim.cmd('packadd wilder.nvim')]]})
 
-  end,
-  config = {
-    max_jobs = 16,
-    compile_path = util.join_paths(vim.fn.stdpath('config'), 'lua', 'packer_compiled.lua'),
-    git = {
-      default_url_format = plug_url_format,
-    },
-  },
+  end
 })
 
 local status, _ = pcall(require, 'packer_compiled')

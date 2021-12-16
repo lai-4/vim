@@ -4,13 +4,14 @@
 <p align='right'><em>Đặng Quốc Lai</em></p>
 
 ## Cách cài đặt nvim0.6 theo packer:
+- Download setting: `git clone --single-branch --branch nvim1 https://github.com/danglai/nvim0.6 ~/AppData/Local/nvim`
 - Mở 1 file bằng vim, -> vim sẽ tự tải packer -> đóng file lại
 - Mở lại file -> `:ps` để cài các thư viện -> đóng file
 - Mở lại file -> `Semshi enable` để kích hoạt font.
-- Kiểm tra file và folder nvim-autopairs trong folder lua. 
+- Kiểm tra file và folder nvim-autopairs trong folder lua.
+- `:CocInstall coc-pyright` (Cài [autopep8](https://pypi.org/project/autopep8/) trong command trước `pip install --upgrade autopep8`)
+- **Lưu ý**: Ở trong folder git của theme, có file ví dụ **autoload/sonokai.vim** thì copy file đó vào thư mục autoload của nvim
 
-## Lưu ý khi cài Theme:
-- Ở trong folder git của theme, có file ví dụ **autoload/sonokai.vim** thì copy file đó vào thư mục autoload của nvim
 ## Phím tắt
 - `C`: Xóa đến cuối dòng
 - `,` `C`: Cắt đến cuối dòng 
@@ -53,26 +54,8 @@
     :echo expand('%:p')     |" full path
     :echo expand('%:p:h')   |" directory containing file ('head')
     ```
-## Install with PlugInstall
-- Download NVim
-  - [Git](https://github.com/neovim/neovim/releases/tag/nightly)
-  - [Nvim 0.6 GG Drive](https://drive.google.com/file/d/14JuitC9dE7uXDbm57sZa8sCAeu7L0QBq)
-- Add path to Environment
-- Download setting:
-```
-git clone --single-branch --branch nvim1 https://github.com/danglai/vim ~/AppData/Local/nvim
-```
-
+    
 ## Config Python with Coc
 - `pip install jedi-language-server`
 - `:CocInstall coc-jedi`
 - `:CocInstall coc-pyright` (Cài [autopep8](https://pypi.org/project/autopep8/) trong command trước `pip install --upgrade autopep8`)
-
-## Not Important
-- Show config path of nvim: `:echo stdpath('config')`
-- Install Npm for Coc
-```
-curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
-sudo bash nodesource_setup.sh
-sudo apt install nodejs
-```

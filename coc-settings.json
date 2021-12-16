@@ -1,0 +1,9 @@
+{
+  "jedi.enable": false,
+  "python.jediEnabled": false,
+  "python.pythonPath": "python3",
+  "diagnostic.enableMessage": false,
+  "pyright.enable": true,
+  "pyright.completion.importSupport": true,
+  "python.analysis.diagnosticMode": "workspace"
+}

@@ -83,7 +83,7 @@ _G.packer_plugins = {
     url = "https://github.com/neoclide/coc.nvim"
   },
   ["hop.nvim"] = {
-    config = { "\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20config.nvim_hop\frequire-\1\0\4\0\3\0\0066\0\0\0009\0\1\0003\2\2\0)\3Ð\aB\0\3\1K\0\1\0\0\rdefer_fn\bvim\0" },
+    config = { "\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20config.nvim-hop\frequire-\1\0\4\0\3\0\0066\0\0\0009\0\1\0003\2\2\0)\3Ð\aB\0\3\1K\0\1\0\0\rdefer_fn\bvim\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -96,23 +96,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\impatient.nvim",
     url = "https://github.com/lewis6991/impatient.nvim"
   },
-  ["lspkind-nvim"] = {
-    after = { "nvim-cmp" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\lspkind-nvim",
-    url = "https://github.com/onsails/lspkind-nvim"
-  },
-  ["nvim-cmp"] = {
-    config = { "require('config.nvim-cmp')" },
-    load_after = {
-      ["lspkind-nvim"] = true
-    },
-    loaded = false,
-    needs_bufread = false,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\nvim-cmp",
-    url = "https://github.com/hrsh7th/nvim-cmp"
+  ["nvim-tree.lua"] = {
+    config = { "require('config.nvim-tree')" },
+    loaded = true,
+    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["packer.nvim"] = {
     loaded = false,
@@ -146,15 +134,6 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\wilder.nvim",
     url = "https://github.com/gelguy/wilder.nvim"
-  },
-  ["zen-mode.nvim"] = {
-    commands = { "ZenMode" },
-    config = { "require('config.zen-mode')" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\zen-mode.nvim",
-    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 
@@ -167,12 +146,10 @@ time([[Setup for wilder.nvim]], false)
 time([[Config for impatient.nvim]], true)
 require('impatient')
 time([[Config for impatient.nvim]], false)
-
--- Command lazy-loads
-time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file ZenMode lua require("packer.load")({'zen-mode.nvim'}, { cmd = "ZenMode", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-time([[Defining lazy-load commands]], false)
-
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require('config.nvim-tree')
+time([[Config for nvim-tree.lua]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
@@ -181,8 +158,7 @@ vim.cmd [[au FileType python ++once lua require("packer.load")({'semshi'}, { ft 
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'hop.nvim', 'vim-swap', 'bufferline.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au BufEnter * ++once lua require("packer.load")({'lspkind-nvim'}, { event = "BufEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'bufferline.nvim', 'hop.nvim', 'vim-swap'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
