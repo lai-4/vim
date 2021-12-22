@@ -13,6 +13,7 @@
 - **Lưu ý**: Ở trong folder git của theme, có file ví dụ **autoload/sonokai.vim** thì copy file đó vào thư mục autoload của nvim
 
 ## Phím tắt
+- Tắt phân tích cú pháp cho 1 dòng trong python, thêm vào cuối dòng đó: `# type: ignore`
 - `C`: Xóa đến cuối dòng
 - `,` `C`: Cắt đến cuối dòng 
 - Word Wrap: `Alt` `z`
