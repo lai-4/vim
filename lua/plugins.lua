@@ -53,18 +53,9 @@ require("packer").startup({
     -- use {"quangnguyen30192/cmp-nvim-ultisnips", after = {'nvim-cmp', 'ultisnips'}}
 
     use {'neoclide/coc.nvim', branch = 'release'}
-
-    --if vim.g.is_mac then
-    --  use {"hrsh7th/cmp-emoji", after = 'nvim-cmp'}
-    --end
-    --if vim.g.is_mac then
-    --  use({ "nvim-treesitter/nvim-treesitter", event = 'BufEnter', run = ":TSUpdate", config = [[require('config.treesitter')]] })
-    --end
-
     if vim.g.is_win then
       use({ "numirias/semshi", ft = "python", config = "vim.cmd [[UpdateRemotePlugins]]" })
     end
-
     use({"machakann/vim-swap", event = "VimEnter"})
 
     -- move faster
@@ -75,17 +66,17 @@ require("packer").startup({
         vim.defer_fn(function() require('config.nvim-hop') end, 2000)
       end
     }
+    use({"sainnhe/sonokai", opt = true}) -- Theme
 
-    -- use({"sainnhe/edge", opt = true})
-    use({"sainnhe/sonokai", opt = true})
-
+    -- tạo dòng tiêu đề
     use({ "akinsho/bufferline.nvim", event = "VimEnter", config = [[require('config.bufferline')]] })
-    -- use({ "elzr/vim-json", ft = { "json", "markdown" } })
-
-    -- use({'folke/zen-mode.nvim', cmd = 'ZenMode', config = [[require('config.zen-mode')]]})
 
     -- gợi ý nhanh ở command
     use({"gelguy/wilder.nvim", opt = true, setup = [[vim.cmd('packadd wilder.nvim')]]})
+    
+    -- Nếu chỉ dẫn trên git clone về thư mục start thì thêm event="VimEnter" vào.
+    -- multi cursor
+    use({"mg979/vim-visual-multi", event = "VimEnter"})
 
   end
 })

@@ -17,6 +17,10 @@
 - `C`: Xóa đến cuối dòng
 - `,` `C`: Cắt đến cuối dòng 
 - Word Wrap: `Alt` `z`
+- [Copy](https://stackoverflow.com/questions/35108243)
+  - Copy nhanh 1 từ: `yiw`
+  - Tìm kiếm 1 từ: `*` hoặc `#`
+  
 - [Di chuyển screen](https://stackoverflow.com/questions/3458689/how-to-move-screen-without-moving-cursor-in-vim):
   - `zt` hoặc `z-enter`: di chuyển dòng hiện tại lên đầu (Top) màn hình
   - `zz` hoặc `z.`: di chuyển dòng hiện tại lên giữa màn hình
