@@ -12,6 +12,11 @@
 - `:CocInstall coc-pyright` (Cài [autopep8](https://pypi.org/project/autopep8/) trong command trước `pip install --upgrade autopep8`)
 - **Lưu ý**: Ở trong folder git của theme, có file ví dụ **autoload/sonokai.vim** thì copy file đó vào thư mục autoload của nvim
 
+## Multi cursor
+### Thay đổi nhiều từ cùng lúc
+- Chọn từ giống nhau: `Ctrl` `n`
+- `cw`: chuyển sang mode chỉnh sửa
+- Nhập nội dung thay đổi
 ## Phím tắt
 - Tắt phân tích cú pháp cho 1 dòng trong python, thêm vào cuối dòng đó: `# type: ignore`
 - `C`: Xóa đến cuối dòng
