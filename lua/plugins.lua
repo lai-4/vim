@@ -25,6 +25,7 @@ vim.cmd("packadd packer.nvim")
 local util = require('packer.util')
 -- auto pair
 require("nvim-autopairs").setup({
+  disable_filetype = { "TelescopePrompt" , "vim" },
   ignored_next_char = "[%w%.]" -- will ignore alphanumeric and `.` symbol
 })
 
