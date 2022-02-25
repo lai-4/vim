@@ -57,3 +57,5 @@ nnoremap <silent> <C-l> <c-w>l<CR>
 
 " [Format Python code in vim](https://www.linuxtut.com/en/4ae1b9ac504567ad4142/)
 nmap <leader>f :silent %!autopep8 --ignore=E501 -<CR>
+
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"

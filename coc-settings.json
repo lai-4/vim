@@ -5,5 +5,7 @@
   "diagnostic.enableMessage": false,
   "pyright.enable": true,
   "pyright.completion.importSupport": true,
-  "python.analysis.diagnosticMode": "workspace"
+  "python.analysis.diagnosticMode": "workspace",
+  "coc.preferences.formatOnType": true
+
 }

@@ -23,21 +23,24 @@ end
 -- Load packer.nvim
 vim.cmd("packadd packer.nvim")
 local util = require('packer.util')
+
+-- thay bằng coc-pair
 -- auto pair
-require("nvim-autopairs").setup({
-  disable_filetype = { "TelescopePrompt" , "vim" },
-  ignored_next_char = "[%w%.]" -- will ignore alphanumeric and `.` symbol
-})
+ require("nvim-autopairs").setup({
+   ignored_next_char = "[%w%.]", -- will ignore alphanumeric and `.` symbol
+   map_cr = true
+ })
 
 require("packer").startup({
   function(use)
     use {'lewis6991/impatient.nvim', config = [[require('impatient')]]}
+    use({"sainnhe/sonokai", opt = true}) -- Theme
 
     use({"wbthomason/packer.nvim", opt = true})
     use {
       'kyazdani42/nvim-tree.lua',
       config = [[require('config.nvim-tree')]]
-  }
+    }
 
     -- vì 2 thư viện dưới đây mà không thể auto import library trong python.
     -- use {"onsails/lspkind-nvim", event = "BufEnter"}
@@ -48,12 +51,13 @@ require("packer").startup({
     -- use {"hrsh7th/cmp-nvim-lua", after = "nvim-cmp"}
     -- use {"hrsh7th/cmp-path", after = "nvim-cmp"}
     -- use {"hrsh7th/cmp-buffer", after = "nvim-cmp"}
-    -- use({ "Vimjas/vim-python-pep8-indent", ft = { "python" } })
     -- use({ "jeetsukumaran/vim-pythonsense", ft = { "python" } })
     -- use({"SirVer/ultisnips", event = 'InsertEnter'})
     -- use {"quangnguyen30192/cmp-nvim-ultisnips", after = {'nvim-cmp', 'ultisnips'}}
-
+    
+    use({ "Vimjas/vim-python-pep8-indent", ft = { "python" } }) -- remove indent 8 in parameters of function
     use {'neoclide/coc.nvim', branch = 'release'}
+
     if vim.g.is_win then
       use({ "numirias/semshi", ft = "python", config = "vim.cmd [[UpdateRemotePlugins]]" })
     end
@@ -67,7 +71,6 @@ require("packer").startup({
         vim.defer_fn(function() require('config.nvim-hop') end, 2000)
       end
     }
-    use({"sainnhe/sonokai", opt = true}) -- Theme
 
     -- tạo dòng tiêu đề
     use({ "akinsho/bufferline.nvim", event = "VimEnter", config = [[require('config.bufferline')]] })
@@ -86,3 +89,20 @@ local status, _ = pcall(require, 'packer_compiled')
 if not status then
   vim.notify("Error requiring packer_compiled.lua: run PackerSync to fix!")
 end
+
+local remap = vim.api.nvim_set_keymap
+local npairs = require('nvim-autopairs')
+npairs.setup({map_cr=false})
+
+-- skip it, if you use another global object
+_G.MUtils= {}
+
+MUtils.completion_confirm=function()
+  if vim.fn.pumvisible() ~= 0  then
+    return vim.fn["coc#_select_confirm"]()
+  else
+    return npairs.autopairs_cr()
+  end
+end
+
+remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})

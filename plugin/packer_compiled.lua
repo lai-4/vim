@@ -122,6 +122,13 @@ _G.packer_plugins = {
     path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\sonokai",
     url = "https://github.com/sainnhe/sonokai"
   },
+  ["vim-python-pep8-indent"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\vim-python-pep8-indent",
+    url = "https://github.com/Vimjas/vim-python-pep8-indent"
+  },
   ["vim-swap"] = {
     loaded = false,
     needs_bufread = false,
@@ -130,8 +137,10 @@ _G.packer_plugins = {
     url = "https://github.com/machakann/vim-swap"
   },
   ["vim-visual-multi"] = {
-    loaded = true,
-    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-visual-multi",
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\vim-visual-multi",
     url = "https://github.com/mg979/vim-visual-multi"
   },
   ["wilder.nvim"] = {
@@ -159,11 +168,11 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType python ++once lua require("packer.load")({'semshi'}, { ft = "python" }, _G.packer_plugins)]]
+vim.cmd [[au FileType python ++once lua require("packer.load")({'semshi', 'vim-python-pep8-indent'}, { ft = "python" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'vim-swap', 'bufferline.nvim', 'hop.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'bufferline.nvim', 'vim-swap', 'hop.nvim', 'vim-visual-multi'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
@@ -171,5 +180,6 @@ if should_profile then save_profiles() end
 end)
 
 if not no_errors then
+  error_msg = error_msg:gsub('"', '\\"')
   vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
 end
