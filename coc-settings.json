@@ -6,6 +6,7 @@
   "pyright.enable": true,
   "pyright.completion.importSupport": true,
   "python.analysis.diagnosticMode": "workspace",
-  "coc.preferences.formatOnType": true
-
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.noselect": true,
+  "suggest.enablePreselect": false
 }
