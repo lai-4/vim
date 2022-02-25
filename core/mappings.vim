@@ -15,6 +15,9 @@ nnoremap <A-z> :set wrap!<CR>
 " Ctrl Backspace to cw
 imap <C-BS> <C-W>
 
+" scroll to begin line from previous end line
+nnoremap o 0o
+
 " go to start and end line
 nnoremap <leader>s 0
 nnoremap <leader>e $
