@@ -1,6 +1,4 @@
 ### Vim ###
-autoload/
-bundle/
 
 # Swap
 [._]*.s[a-v][a-z]
