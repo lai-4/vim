@@ -19,6 +19,7 @@
 - Nhập nội dung thay đổi
 ## Phím tắt
 - Tắt phân tích cú pháp cho 1 dòng trong python, thêm vào cuối dòng đó: `# type: ignore`
+- Paste từ vim sang Colab trong Normal mode: `Ctrl` + `Shift` + `v`
 - `C`: Xóa đến cuối dòng
 - `,` `C`: Cắt đến cuối dòng 
 - Word Wrap: `Alt` `z`
