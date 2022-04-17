@@ -4,13 +4,19 @@
 <p align='right'><em>Đặng Quốc Lai</em></p>
 
 ## Cách cài đặt nvim0.6 theo packer:
-- Download setting: `git clone --single-branch --branch nvim1 https://github.com/danglai/nvim0.6 ~/AppData/Local/nvim`
+- Download setting: 
+  ```cmd
+  git clone --single-branch --branch nvim1 https://github.com/danglai/nvim0.6 ~/AppData/Local/nvim
+  ```
 - Mở 1 file bằng vim, -> vim sẽ tự tải packer -> đóng file lại
 - Mở lại file -> `:ps` để cài các thư viện -> đóng file
 - Mở lại file -> `Semshi enable` để kích hoạt font.
 - Kiểm tra file và folder nvim-autopairs trong folder lua.
 - `:CocInstall coc-pyright` (Cài [autopep8](https://pypi.org/project/autopep8/) trong command trước `pip install --upgrade autopep8`)
-- **Lưu ý**: Nếu gặp vấn đề với sonokai theme, vào đường dẫn của README.md hiện tại, chạy lệnh: `cd %localappdata% && copy /y nvim-data\site\pack\packer\opt\sonokai\autoload\sonokai.vim nvim\autoload`
+- **Lưu ý**: Nếu gặp vấn đề với sonokai theme, vào đường dẫn của README.md hiện tại, chạy lệnh: 
+  ```cmd 
+  cd %localappdata% && copy /y nvim-data\site\pack\packer\opt\sonokai\autoload\sonokai.vim nvim\autoload
+  ```
 
 ## Multi cursor
 ### Thay đổi nhiều từ cùng lúc
