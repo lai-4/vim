@@ -10,7 +10,7 @@
 - Mở lại file -> `Semshi enable` để kích hoạt font.
 - Kiểm tra file và folder nvim-autopairs trong folder lua.
 - `:CocInstall coc-pyright` (Cài [autopep8](https://pypi.org/project/autopep8/) trong command trước `pip install --upgrade autopep8`)
-- **Lưu ý**: Ở trong folder git của theme (*C:\Users\pc\AppData\Local\nvim-data\site\pack\packer\opt\sonokai\autoload*), có file ví dụ **autoload/sonokai.vim** thì copy file đó vào thư mục autoload của nvim
+- **Lưu ý**: Nếu gặp vấn đề với sonokai theme, vào đường dẫn của README.md hiện tại, chạy lệnh: `cd %localappdata% && copy /y nvim-data\site\pack\packer\opt\sonokai\autoload\sonokai.vim nvim\autoload`
 
 ## Multi cursor
 ### Thay đổi nhiều từ cùng lúc

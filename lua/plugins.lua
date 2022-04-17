@@ -61,19 +61,20 @@ require("packer").startup({
     if vim.g.is_win then
       use({ "numirias/semshi", ft = "python", config = "vim.cmd [[UpdateRemotePlugins]]" })
     end
-    use({"machakann/vim-swap", event = "VimEnter"})
+    -- use({"machakann/vim-swap", event = "VimEnter"})
+    use({"junegunn/fzf"})
 
     -- move faster
-    use {
-      'phaazon/hop.nvim',
-      event = "VimEnter",
-      config = function()
-        vim.defer_fn(function() require('config.nvim-hop') end, 2000)
-      end
-    }
+    -- use {
+    --   'phaazon/hop.nvim',
+    --   event = "VimEnter",
+    --   config = function()
+    --     vim.defer_fn(function() require('config.nvim-hop') end, 2000)
+    --   end
+    -- }
 
     -- tạo dòng tiêu đề
-    use({ "akinsho/bufferline.nvim", event = "VimEnter", config = [[require('config.bufferline')]] })
+    -- use({ "akinsho/bufferline.nvim", event = "VimEnter", config = [[require('config.bufferline')]] })
 
     -- gợi ý nhanh ở command
     use({"gelguy/wilder.nvim", opt = true, setup = [[vim.cmd('packadd wilder.nvim')]]})
