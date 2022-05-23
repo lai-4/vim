@@ -13,7 +13,7 @@
 - Mở lại file -> `:ps` để cài các thư viện -> đóng file
 - Mở lại file -> `Semshi enable` để kích hoạt font.
 - Kiểm tra file và folder nvim-autopairs trong folder lua.
-- ```pip install --upgrade autopep8 jedi-language-server jedi wheel yarp```
+- ```pip install --upgrade autopep8 jedi-language-server jedi wheel yarp pynvim```
 - ```:CocInstall coc-pyright coc-jedi```
 
 - **Lưu ý**: Nếu gặp vấn đề với sonokai theme, vào đường dẫn của README.md hiện tại, chạy lệnh: 
@@ -26,6 +26,9 @@
 - Cài thêm **wheel yarp** vào pip, đã thêm ở cách cài.
 - Trong ['./core/globals.nvim](./core/globals.vim), thêm dòng `let g:python_host_prog=substitute(exepath('python'), '.exe$', '', 'g')`
 - Kiểm tra trong nvim `:echo has('python')`, nếu ra 1 là ok.
+- Download toàn bộ **site-packages** trong [link](https://github.com/danglaiacc/kn/commit/7b9870f099d346427caf36734feccf88c119b49a) rồi copy vào thư mục **%localappdata%\Programs\Python\Python39\Lib**, check file /build/index.js của coc trong nvim-data.
+- Dùng lệnh `:checkhealth` trong vim để kiểm tra.
+- Dùng lệnh `:UpdateRemotePlugins`, rồi khởi động lại nvim là được.
 
 ## Multi cursor
 ### Thay đổi nhiều từ cùng lúc
