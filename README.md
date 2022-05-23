@@ -25,6 +25,7 @@
 ### wilder_python..., wilder_function
 - Cài thêm **wheel yarp** vào pip, đã thêm ở cách cài.
 - Trong ['./core/globals.nvim](./core/globals.vim), thêm dòng `let g:python_host_prog=substitute(exepath('python'), '.exe$', '', 'g')`
+- Kiểm tra trong nvim `:echo has('python')`, nếu ra 1 là ok.
 
 ## Multi cursor
 ### Thay đổi nhiều từ cùng lúc
