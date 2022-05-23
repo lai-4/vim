@@ -3,7 +3,8 @@
 <br/>
 <p align='right'><em>Đặng Quốc Lai</em></p>
 
-## Cách cài đặt nvim0.6 theo packer:
+## Cách cài đặt nvim0.7 theo packer:
+- Cài python, nodejs, git, download nvim0.7
 - Download setting: 
   ```cmd
   git clone --single-branch --branch nvim1 https://github.com/danglai/nvim0.6 ~/AppData/Local/nvim
@@ -12,13 +13,18 @@
 - Mở lại file -> `:ps` để cài các thư viện -> đóng file
 - Mở lại file -> `Semshi enable` để kích hoạt font.
 - Kiểm tra file và folder nvim-autopairs trong folder lua.
-- ```pip install --upgrade autopep8 jedi-language-server```
+- ```pip install --upgrade autopep8 jedi-language-server jedi wheel yarp```
 - ```:CocInstall coc-pyright coc-jedi```
 
 - **Lưu ý**: Nếu gặp vấn đề với sonokai theme, vào đường dẫn của README.md hiện tại, chạy lệnh: 
   ```cmd 
   cd %localappdata% && copy /y nvim-data\site\pack\packer\opt\sonokai\autoload\sonokai.vim nvim\autoload
   ```
+
+## Error
+### wilder_python..., wilder_function
+- Cài thêm **wheel yarp** vào pip, đã thêm ở cách cài.
+- Trong ['./core/globals.nvim](./core/globals.vim), thêm dòng `let g:python_host_prog=substitute(exepath('python'), '.exe$', '', 'g')`
 
 ## Multi cursor
 ### Thay đổi nhiều từ cùng lúc

@@ -16,6 +16,7 @@ let g:did_install_default_menus = 1  " do not load menu
 if executable('python')
    if g:is_win
     let g:python3_host_prog=substitute(exepath('python'), '.exe$', '', 'g')
+    let g:python_host_prog=substitute(exepath('python'), '.exe$', '', 'g')
   elseif g:is_linux || g:is_mac
     let g:python3_host_prog=exepath('python')
   endif
