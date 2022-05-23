@@ -11,7 +11,7 @@
   ```
 - Mở 1 file bằng vim, -> vim sẽ tự tải packer -> đóng file lại
 - Mở lại file -> `:ps` để cài các thư viện -> đóng file
-- Mở lại file -> `Semshi enable` để kích hoạt font.
+- Mở lại file -> `:Semshi enable` để kích hoạt font. -> `:UpdateRemotePlugins`
 - Kiểm tra file và folder nvim-autopairs trong folder lua.
 - ```pip install --upgrade autopep8 jedi-language-server jedi wheel yarp pynvim```
 - ```:CocInstall coc-pyright coc-jedi```
