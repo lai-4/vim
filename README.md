@@ -13,8 +13,12 @@
 - Mở lại file -> `:ps` để cài các thư viện -> đóng file
 - Mở lại file -> `:Semshi enable` để kích hoạt font. -> `:UpdateRemotePlugins`
 - Kiểm tra file và folder nvim-autopairs trong folder lua.
-- ```pip install --upgrade autopep8 jedi-language-server jedi wheel yarp pynvim```
-- ```:CocInstall coc-pyright coc-jedi```
+- ```cmd
+  pip install --upgrade autopep8 jedi-language-server jedi wheel yarp pynvim
+  ```
+- ```cmd
+  :CocInstall coc-pyright coc-jedi
+  ```
 
 - **Lưu ý**: Nếu gặp vấn đề với sonokai theme, vào đường dẫn của README.md hiện tại, chạy lệnh: 
   ```cmd 
