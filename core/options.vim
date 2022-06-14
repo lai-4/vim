@@ -89,3 +89,4 @@ set isfname-=,
 
 set nowrap  " do no wrap
 set autochdir " create file in child folder instead of parent folder
+set rtp+=~/.fzf

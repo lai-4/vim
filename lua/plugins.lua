@@ -62,7 +62,10 @@ require("packer").startup({
       use({ "numirias/semshi", ft = "python", config = "vim.cmd [[UpdateRemotePlugins]]" })
     end
     -- use({"machakann/vim-swap", event = "VimEnter"})
-    use({"junegunn/fzf"})
+    use({
+      "junegunn/fzf",
+      requires = {{'junegunn/fzf.vim'}},
+    })
 
     -- move faster
     -- use {

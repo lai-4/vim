@@ -22,3 +22,20 @@ function! utils#RandElement(seq) abort
 
   return a:seq[l:idx]
 endfunction
+
+function! XmlBeautify()
+  call XmlMinify()
+  execute "%s/></>\r</e"
+  normal! gg=G
+endfunction
+  
+function! XmlMinify()
+  set filetype=xml
+  filetype indent on
+  normal! ggVGJ
+  execute "%s/>\s\+</></e"
+  execute "%s/> </></e"
+endfunction
+
+command! XmlBeautify    execute "call XmlBeautify()" | execute "call XmlBeautify()"
+command! XmlMinify      execute "call XmlMinify()"

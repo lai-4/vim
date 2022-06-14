@@ -79,6 +79,12 @@ _G.packer_plugins = {
     path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\fzf",
     url = "https://github.com/junegunn/fzf"
   },
+  ["fzf.vim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "C:\\Users\\pc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\fzf.vim",
+    url = "https://github.com/junegunn/fzf.vim"
+  },
   ["impatient.nvim"] = {
     config = { "require('impatient')" },
     loaded = true,
@@ -138,14 +144,14 @@ time([[Defining packer_plugins]], false)
 time([[Setup for wilder.nvim]], true)
 vim.cmd('packadd wilder.nvim')
 time([[Setup for wilder.nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require('config.nvim-tree')
-time([[Config for nvim-tree.lua]], false)
 -- Config for: impatient.nvim
 time([[Config for impatient.nvim]], true)
 require('impatient')
 time([[Config for impatient.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require('config.nvim-tree')
+time([[Config for nvim-tree.lua]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
