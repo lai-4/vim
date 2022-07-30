@@ -24,6 +24,10 @@
   ```cmd 
   cd %localappdata% && copy /y nvim-data\site\pack\packer\opt\sonokai\autoload\sonokai.vim nvim\autoload
   ```
+  for macOS
+  ```bash
+  cp ~/.local/share/nvim/site/pack/packer/opt/sonokai/autoload/sonokai.vim ~/.config/nvim/autoload
+  ```
 
 ## Error
 ### wilder_python..., wilder_function
