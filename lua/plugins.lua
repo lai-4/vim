@@ -58,9 +58,9 @@ require("packer").startup({
     use({ "Vimjas/vim-python-pep8-indent", ft = { "python" } }) -- remove indent 8 in parameters of function
     use {'neoclide/coc.nvim', branch = 'release'}
 
-    if vim.g.is_win then
-      use({ "numirias/semshi", ft = "python", config = "vim.cmd [[UpdateRemotePlugins]]" })
-    end
+    -- if vim.g.is_win then
+    use({ "numirias/semshi", ft = "python", config = "vim.cmd [[UpdateRemotePlugins]]" })
+    -- end
     -- use({"machakann/vim-swap", event = "VimEnter"})
     use({
       "junegunn/fzf",

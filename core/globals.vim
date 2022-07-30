@@ -13,7 +13,7 @@ let g:loaded_node_provider = 0
 
 let g:did_install_default_menus = 1  " do not load menu
 
-if executable('python')
+if executable('python3')
    if g:is_win
     let g:python3_host_prog=substitute(exepath('python'), '.exe$', '', 'g')
     let g:python_host_prog=substitute(exepath('python'), '.exe$', '', 'g')
