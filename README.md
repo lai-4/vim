@@ -3,17 +3,14 @@
 <br/>
 
 # install
-1. `brew install nvim`
-2. 
+1. 
 ```cmd
+brew install nvim
 git clone --single-branch --branch nvim-mac https://github.com/danglai/vim ~/.config/nvim
+pip3 install --upgrade autopep8 jedi-language-server jedi wheel yarp pynvim
 ```
-3. 
-```cmd
-  pip3 install --upgrade autopep8 jedi-language-server jedi wheel yarp pynvim
-```
-4. Mở 1 file, `:ps` > `:Semshi enable` > `:UpdateRemotePlugins`
-5.
+2. Mở 1 file bằng nvim, `:ps` > `:Semshi enable` > `:UpdateRemotePlugins`
+3.
 ```cmd
   :CocInstall coc-pyright coc-jedi
 ```
